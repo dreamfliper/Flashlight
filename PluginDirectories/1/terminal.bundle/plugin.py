@@ -66,6 +66,7 @@ def run(command):
         ascript = ascript_currentdir + '''
         tell application "Terminal"
             activate
+			delay 0.1 -- fix for termianl.app
             do script "cd " & dir
             do script {0} in front window
         end tell
