@@ -1,6 +1,6 @@
 import objc
 import AddressBook as ab
- 
+import unicodedata
 import pprint as pp
  
 def find_contact(query, address_book, wants_field=None):
@@ -24,7 +24,7 @@ def find_contact(query, address_book, wants_field=None):
    return scored_matches[-1][0] if len(scored_matches) else None
  
  
-import unicodedata
+
 def strip_accents(s):
     return ''.join(c for c in unicodedata.normalize('NFD', s)
                if unicodedata.category(c) != 'Mn')

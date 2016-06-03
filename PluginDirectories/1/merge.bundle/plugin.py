@@ -17,19 +17,19 @@ def run(applicationName):
 	from applescript import asrun, asquote
 	applicationName = applicationName.capitalize()
 	ascript = '''
-	tell application "''' + applicationName + '''"
+	tell application %s
       activate
     end tell
     delay 0.1 -- fix for termianl.app
 	set location to (user locale of (get system info))
  	if location is equal to "zh_TW" then
  		tell application "System Events"
- 			click menu item "合併所有視窗" of menu "視窗" of menu bar 1 of process "''' + applicationName + '''"
+ 			click menu item "合併所有視窗" of menu "視窗" of menu bar 1 of process %s
  		end tell
  	else
 	    tell application "System Events"
-		    click menu item "Merge All Windows" of menu "Window" of menu bar 1 of process "''' + applicationName + '''"
+		    click menu item "Merge All Windows" of menu "Window" of menu bar 1 of process %s
 		end tell
 	end if
-	'''
+	'''%(asquote(applicationName),asquote(applicationName),asquote(applicationName))
 	asrun(ascript.format(asquote(applicationName)))

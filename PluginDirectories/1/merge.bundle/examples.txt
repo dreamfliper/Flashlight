@@ -1,1 +1,2 @@
 merge ~application(finder)
+mg ~application(safari)
