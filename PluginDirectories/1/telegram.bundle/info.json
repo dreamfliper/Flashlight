@@ -1,0 +1,10 @@
+{
+  "categories" : ["Utilities"],
+  "displayName" : "Telegram",
+  "name" : "telegram",
+  "description" : "Send Message to telegram",
+  "examples" : [
+    "telegram John good morning",
+    "tg Mary How do you do"
+  ]
+}

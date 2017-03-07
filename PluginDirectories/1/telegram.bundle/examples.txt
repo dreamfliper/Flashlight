@@ -1,0 +1,2 @@
+telegram name(John) ~message(Good Morning)
+tg name(Mary) ~message(Hello, world)
